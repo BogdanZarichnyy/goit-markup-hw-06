@@ -85,21 +85,19 @@ address {
     font-style: normal;
 }
 
-/*Головний шрифт*/
-body {
+/*Фон сторінки та головний шрифт*/
+.body-general {
+    background-color: var(--content-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-}
-
-/* Фон сторінки */
-.body-general {
-    background-color: var(--content-color);
     color: var(--primary-text-color);
 }
-
 /*Контейнер контенту - ширина 1200px*/
 .container-content {
     max-width: 1200px;
@@ -316,6 +314,12 @@ body {
 /*Контент*/
 .main-content {
     background-color: inherit;
+    flex: 1 0 auto;
+    /*Ця опція необхідна для того, щоб футер завжди був притиснутий до низу viewport при відсутності контенту*/
+    /* Розширений запис властивості flex:*/
+    /* flex-grow: 1; Коефіцієнт розтягування - коефіцієнт збільшення ширини flex-елементу відносно інших flex-елементів.*/
+    /* flex-shrink: 0; Коефіцієнт звуження - коефіцієнт зменшення ширини flex-елементу щодо інших flex-елементів.*/
+    /* flex-basis: auto; Базова ширина flex-елемента. */
 }
 
 .section {
