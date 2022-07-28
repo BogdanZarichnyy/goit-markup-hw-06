@@ -212,7 +212,7 @@ address {
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function:
-            cubic-bezier(0.4, 0, 0.2, 1);
+        cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navigation-link:focus,
@@ -237,24 +237,6 @@ address {
         width: 100%;
         background-color: var(--focus-color);
     }
-
-    /* 25% {
-        left: 0;
-        width: 100%;
-        background-color: var(--focus-color);
-    }
-
-    75% {
-        right: 0;
-        width: 100%;
-        background-color: var(--focus-color);
-    } 
-
-    100% {
-        right: 0;
-        width: 0;
-        background-color: var(--focus-color);
-    } */
 }
 
 @keyframes animation-underline-none {
@@ -277,8 +259,6 @@ address {
     background-color: var(--focus-color); */
 
     animation-name: animation-underline;
-    /* animation-iteration-count: infinite;
-    animation-duration: 1000ms; */
     animation-duration: 250ms;
     animation-direction: alternate;
     animation-fill-mode: forwards;
@@ -291,8 +271,6 @@ address {
     background-color: var(--general-color); */
 
     animation-name: animation-underline;
-    /* animation-iteration-count: infinite;
-    animation-duration: 1000ms; */
     animation-duration: 250ms;
     animation-direction: alternate;
     animation-fill-mode: forwards;
