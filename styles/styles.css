@@ -409,8 +409,8 @@ address {
     line-height: 1.88;
     letter-spacing: 0.06em;
     color: var(--content-color);
-    box-shadow:
-        0 4px 4px var(--shadow-button);
+    /* box-shadow:
+        0 4px 4px var(--shadow-button); */
     user-select: none;
     cursor: pointer;
     transition-property: background-image box-shadow text-shadow;
