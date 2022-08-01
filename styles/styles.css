@@ -158,19 +158,11 @@ address {
     margin-left: 50px;
 }
 
-.navigation-link {
-    display: block;
+.navigation-item {
     position: relative;
-    color: var(--primary-text-color);
-    padding: 32px 0 31px;
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function:
-        cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/*Декоративний елемент*/
-.navigation-link::before {
+.navigation-item::before {
     content: '';
     position: absolute;
     right: 0;
@@ -190,6 +182,91 @@ address {
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+@keyframes animation-underline {
+    0% {
+        left: 0;
+        width: 0;
+        background-color: var(--focus-color);
+    }
+
+    100% {
+        left: 0;
+        width: 100%;
+        background-color: var(--focus-color);
+    }
+}
+
+@keyframes animation-underline-none {
+    0% {
+        right: 0;
+        width: 100%;
+        background-color: var(--focus-color);
+    }
+
+    100% {
+        right: 0;
+        width: 0;
+        background-color: var(--focus-color);
+    }
+}
+
+.navigation-item:focus::before {
+    /* left: 0;
+    width: 100%;
+    background-color: var(--focus-color); */
+
+    animation-name: animation-underline;
+    animation-duration: 250ms;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navigation-item:hover::before {
+    /* left: 0;
+    width: 100%;
+    background-color: var(--general-color); */
+
+    animation-name: animation-underline;
+    animation-duration: 250ms;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navigation-link {
+    display: block;
+    position: relative;
+    color: var(--primary-text-color);
+    padding: 32px 0 31px;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function:
+        cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/*Декоративний елемент*/
+/* .navigation-link::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    height: 4px;
+    width: 0;
+    background-color: var(--general-color);
+    border-radius: 2px; */
+    /* transition-property: width background-color;
+    transition-duration: 250ms;
+    transition-timing-function:
+        cubic-bezier(0.4, 0, 0.2, 1); */
+
+    /* animation-name: animation-underline-none;
+    animation-duration: 250ms;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+} */
 
 .current {
     color: var(--general-color);
@@ -225,7 +302,7 @@ address {
     color: var(--general-color);
 }
 
-@keyframes animation-underline {
+/* @keyframes animation-underline {
     0% {
         left: 0;
         width: 0;
@@ -251,31 +328,31 @@ address {
         width: 0;
         background-color: var(--focus-color);
     }
-}
+} */
 
-.navigation-link:focus::before {
+/* .navigation-link:focus::before { */
     /* left: 0;
     width: 100%;
     background-color: var(--focus-color); */
 
-    animation-name: animation-underline;
+    /* animation-name: animation-underline;
     animation-duration: 250ms;
     animation-direction: alternate;
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 
-.navigation-link:hover::before {
+/* .navigation-link:hover::before { */
     /* left: 0;
     width: 100%;
     background-color: var(--general-color); */
 
-    animation-name: animation-underline;
+    /* animation-name: animation-underline;
     animation-duration: 250ms;
     animation-direction: alternate;
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 
 .current:focus::after {
     background-color: var(--focus-color);
