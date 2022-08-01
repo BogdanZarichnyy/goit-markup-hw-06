@@ -971,14 +971,14 @@ address {
     height: 100vh;
     background: var(--box-shadow-3);
     opacity: 1;
-    transition-property: opacity;
+    transition-property: opacity, visibility;
     transition-duration: 250ms;
     transition-timing-function:
         cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-hidden {
-    /*visibility: hidden;*/
+    visibility: hidden;
     opacity: 0;
     pointer-events: none;
 }
